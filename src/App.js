@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Bars from './components/Bars';
+import Map from './components/Map';
+
+import { MapCP } from './context/MapCP';
+
+import styled from 'styled-components'
+
+const FinalPage = styled.div `
+  display : flex;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MapCP>
+      <FinalPage>
+        <Bars/>
+        <Map/>
+      </FinalPage>
+    </MapCP>
   );
 }
 
