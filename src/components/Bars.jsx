@@ -7,11 +7,24 @@ const BarsList = styled.div `
 
     display : flex;
     flex-direction : column;
-    overflow-y : scroll;
-    height : 100%;
+    overflow : scroll;
+    height : 100vh;
     width : 30%;
     margin-left : 1%;
-    margin-right : 0.5%
+    margin-right : 0.5%;
+    ::-webkit-scrollbar {
+        direction:ltr;
+        height: 4;
+        width: 20px;
+    }
+    ::-webkit-scrollbar-thumb:vertical{
+        height : 15%;
+        background: black;
+        border-radius: 10px;
+    }
+    a{
+        text-decoration : none;
+    }
 `
 
 const Bar = styled.div `

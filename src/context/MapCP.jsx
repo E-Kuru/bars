@@ -1,12 +1,10 @@
-import {useEffect, useState,createContext} from 'react'
+import { useState,createContext} from 'react'
 
 const MapContext = createContext({})
 
 const MapCP = props => {
 
     const [myPosition, setMyPosition] = useState(null)
-
-    
 
     const value = {
         myPosition : {

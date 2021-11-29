@@ -14,32 +14,28 @@ const BarMap = styled.div `
     background-color : #008080
 
 `
-
-const allMarkers = styled.div `
-
+const Ooga = styled.div `
     height : 100%;
-    
-    hover:{
-        color : white;
-    }
 `
 
 function Map() {
-
+    
     const {myPosition} = useContext(MapContext)
     console.log(allBars[0]);
     return (
         <BarMap>
+            <Ooga>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "" }}
                 defaultCenter={myPosition}
-                defaultZoom={14}>
+                defaultZoom={16}>
 
                     <Marker
                     color='red'
                     lat={myPosition.lat}
                     lng={myPosition.lng}
-                    />                        
+                    />
+                                            
                         {allBars.map(e => (
                             <Marker
                             color='#1A202C'
@@ -49,6 +45,7 @@ function Map() {
                             />
                         ))}
             </GoogleMapReact>
+            </Ooga>
         </BarMap>
         )
 }
