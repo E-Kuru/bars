@@ -8,7 +8,6 @@ import styled from 'styled-components'
 import allBars from '../bars.json'
 
 const BarMap = styled.div `
-    
     width : 70%;
     height : 100vh;
     background-color : #008080
